@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "composite": true,
+        "types": ["node", "vite/client"],
+        "target": "es6",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "outDir": "build",
+        "lib": ["dom", "ES2022"],
+        "strict": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": false,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
