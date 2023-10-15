@@ -32,7 +32,8 @@ export default function Contact() {
 
         try {
             const response = await sendEmail({ name, email, message })
-            if (response.status === 200) {
+            console.log(response)
+            if (response === '200') {
                 toast.success('E-mail enviado com sucesso!', {
                     position: 'top-center',
                     autoClose: 1500,

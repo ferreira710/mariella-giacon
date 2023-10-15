@@ -30,24 +30,25 @@ app.get('/life-check', (_, res) => {
 app.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body
     const params = {
-        Source: process.env.AWS_EMAIL || '',
+        Source: email,
         Destination: {
-            ToAddresses: [email],
+            ToAddresses: [process.env.VITE_EMAIL || ''],
         },
         Message: {
+            Subject: {
+                Data: `Contato de ${name} via site.`,
+            },
             Body: {
                 Text: {
                     Data: message,
                 },
             },
-            Subject: {
-                Data: `Contato via site - ${name}`,
-            },
         },
     }
 
-    ses.sendEmail(params, (error: Error) => {
-        if (error) {
+    ses.sendEmail(params, (err: any) => {
+        if (err) {
+            console.error(err)
             res.status(500).send('Erro no envio do e-mail')
         } else {
             res.status(200).send('E-mail enviado com sucesso')
