@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="bg-white">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 <div className="grid gap-8 border-t border-gray-200 py-8 sm:grid-cols-12 md:py-12">
-                    <div className="sm:col-span-12 lg:col-span-3">
+                    <div className="sm:col-span-12 lg:col-span-4">
                         <div className="mb-2">
                             <Image
                                 className="h-20"
@@ -18,7 +18,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                    <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
                         <h6 className="mb-2 font-medium text-gray-800">
                             Redes sociais
                         </h6>
@@ -56,39 +56,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-                        <h6 className="mb-2 font-medium text-gray-800">
-                            Projetos
-                        </h6>
-                        <ul className="text-sm">
-                            <li className="mb-2">
-                                <a
-                                    href="#0"
-                                    className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
-                                >
-                                    Projeto 1
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a
-                                    href="#0"
-                                    className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
-                                >
-                                    Projeto 2
-                                </a>
-                            </li>
-                            <li className="mb-2">
-                                <a
-                                    href="#0"
-                                    className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
-                                >
-                                    Projeto 3
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
+                    <div className="sm:col-span-10 md:col-span-6 lg:col-span-4">
                         <h6 className="mb-2 font-medium text-gray-800">
                             O escritório
                         </h6>
@@ -110,20 +78,6 @@ export default function Footer() {
                                 </p>
                             </li>
                         </ul>
-                    </div>
-
-                    <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-                        <h6 className="mb-2 font-medium text-gray-800">
-                            Como chegar
-                        </h6>
-                        <div className="w-full">
-                            <div className="mb-4 flex flex-wrap">
-                                <Image
-                                    src="https://img.olhardigital.com.br/wp-content/uploads/2018/12/20181218065336.jpg"
-                                    className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900"
-                                />
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div className="border-t border-gray-200 py-4 md:flex md:items-center md:justify-between md:py-8">

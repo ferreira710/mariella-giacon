@@ -9,9 +9,15 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                saudagar: ['Saudagar'],
+            },
             colors: {
                 bg: {
                     DEFAULT: '#f7fafc',
+                },
+                container: {
+                    DEFAULT: '#f0fdf5',
                 },
             },
         },

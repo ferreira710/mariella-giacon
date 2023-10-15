@@ -1,22 +1,19 @@
 {
     "compilerOptions": {
-        "jsx": "react-jsx",
-        "composite": true,
-        "types": ["node", "vite/client"],
-        "target": "es6",
-        "module": "es2022",
-        "moduleResolution": "node",
-        "rootDir": "src",
-        "outDir": "build",
-        "lib": ["dom", "ES2022"],
-        "strict": true,
-        "esModuleInterop": true,
-        "allowJs": true,
-        "checkJs": false,
-        "resolveJsonModule": true,
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "include": ["src"]
 }

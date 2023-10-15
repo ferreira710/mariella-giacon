@@ -4,7 +4,7 @@ export default function Hero() {
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 <div className="pb-12 text-center md:pb-16">
                     <h1
-                        className="leading-tighter mb-4 text-5xl font-extrabold tracking-tighter md:text-6xl"
+                        className="leading-tighter mb-4 font-saudagar text-6xl font-extrabold md:text-6xl"
                         data-aos="zoom-y-out"
                     >
                         Mariella Giacon
@@ -20,7 +20,7 @@ export default function Hero() {
                             data-aos-delay="150"
                         >
                             Arquitetura paisagista ou paisagismo é a arte e a
-                            técnica de projetar, planear, gerir e preservar os
+                            técnica de projetar, planejar, gerir e preservar os
                             espaços abertos, urbanos ou não, de forma a criar
                             micro e macro paisagens, de acordo com critérios
                             estéticos e sustentáveis, de acordo com cada lugar.

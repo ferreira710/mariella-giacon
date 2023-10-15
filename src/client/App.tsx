@@ -5,6 +5,7 @@ import About from './components/utils/about'
 import Contact from './components/utils/contact'
 import Features from './components/utils/features'
 import Hero from './components/utils/hero'
+import Services from './components/utils/services'
 
 export default function App() {
     return (
@@ -12,11 +13,12 @@ export default function App() {
             <header>
                 <Header />
             </header>
-            <main className="mb-auto flex w-full flex-col pt-16">
+            <main id="home" className="mb-auto flex w-full flex-col pt-16">
                 <Banner />
                 <Hero />
-                <Features />
                 <About />
+                <Features />
+                <Services />
                 <Contact />
             </main>
             <footer>

@@ -1,6 +1,5 @@
 import {
     Image,
-    Link,
     Navbar,
     NavbarBrand,
     NavbarContent,
@@ -9,9 +8,9 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from '@nextui-org/react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-scroll'
 import { S3_IMAGE_BUCKET } from '../../config/settings'
-
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [top, setTop] = useState<boolean>(true)
@@ -20,13 +19,19 @@ export default function Header() {
         window.scrollY > 10 ? setTop(false) : setTop(true)
     }
 
+    function cleanText(texto: string) {
+        texto = texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        texto = texto.replace(/ç/g, 'C')
+        return texto
+    }
+
     useEffect(() => {
         scrollHandler()
         window.addEventListener('scroll', scrollHandler)
         return () => window.removeEventListener('scroll', scrollHandler)
     }, [top])
 
-    const menuItems = ['Home', 'Portifólio', 'Sobre', 'Contato']
+    const menuItems = ['Home', 'Sobre', 'Portifólio', 'Serviços', 'Contato']
 
     return (
         <header
@@ -47,10 +52,11 @@ export default function Header() {
                     {menuItems.map((item, index) => (
                         <NavbarItem key={`${item}-${index}`}>
                             <Link
-                                className="w-full"
-                                href="#"
-                                size="lg"
+                                className="w-full cursor-pointer"
+                                to={cleanText(item.toLowerCase())}
                                 color="foreground"
+                                smooth={true}
+                                duration={500}
                             >
                                 {item}
                             </Link>
@@ -67,10 +73,11 @@ export default function Header() {
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
-                                className="w-full"
-                                href="#"
-                                size="lg"
+                                className="w-full cursor-pointer"
+                                to={cleanText(item.toLowerCase())}
                                 color="foreground"
+                                smooth={true}
+                                duration={500}
                             >
                                 {item}
                             </Link>
