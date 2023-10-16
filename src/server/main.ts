@@ -49,9 +49,9 @@ app.post('/send-email', async (req, res) => {
     ses.sendEmail(params, (err: any) => {
         if (err) {
             console.error(err)
-            res.status(500).send('Erro no envio do e-mail')
+            res.status(500).send(err)
         } else {
-            res.status(200).send('E-mail enviado com sucesso')
+            res.status(200).send(err)
         }
     })
 })
