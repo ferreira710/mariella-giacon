@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { S3 } from '@aws-sdk/client-s3'
+import { useEffect, useRef, useState } from 'react'
 import 'react-responsive-modal/styles.css'
 import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
-import { S3 } from '@aws-sdk/client-s3'
-import { useEffect, useRef } from 'react'
 
 import Modal from 'react-responsive-modal'
 import { S3_IMAGE_BUCKET } from '../../config/settings'
@@ -16,6 +16,7 @@ export default function Features() {
     const [open, setOpen] = useState(false)
     const [projectArray, setProjectArray] = useState([])
     const [selectedProject, setSelectedProject] = useState(null)
+    const [activeSlide, setActiveSlide] = useState(0)
 
     const tabs = useRef<HTMLDivElement>(null)
 
@@ -29,7 +30,19 @@ export default function Features() {
                 slidesPerView: 3,
             },
         },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
     }
+
+    const handleInit = () => {
+        setActiveSlide(0)
+    }
+
+    useEffect(() => {
+        handleInit()
+    }, [])
 
     useEffect(() => {
         async function getImages() {
@@ -96,7 +109,17 @@ export default function Features() {
                         </p>
                     </div>
                     <div className='slider-container'>
-                        <Swiper {...settings}>
+                        <Swiper
+                            {...settings}
+                            pagination={{
+                                bulletClass: 'customBullets',
+                                clickable: true,
+                            }}
+                            navigation
+                            direction='horizontal'
+                            keyboard
+                            allowTouchMove
+                        >
                             {projectArray.map((image, index) => (
                                 <SwiperSlide key={index}>
                                     <img

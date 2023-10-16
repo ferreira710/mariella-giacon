@@ -1,6 +1,9 @@
 import { S3 } from '@aws-sdk/client-s3'
 import { useEffect, useState } from 'react'
 import { CgClose } from 'react-icons/cg'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { S3_IMAGE_BUCKET } from '../../config/settings'
 

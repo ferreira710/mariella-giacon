@@ -7,13 +7,12 @@ export default function Contact() {
             className='flex w-full flex-col items-center bg-white py-12 md:py-20'
         >
             <div className='mx-auto max-w-6xl px-4 pb-6 sm:px-6 md:pb-0'>
-                <div className='mx-auto max-w-3xl text-end'>
+                <div className='mx-auto max-w-3xl text-center'>
                     <h2 className='font-heading mb-4 text-3xl font-bold  md:text-4xl'>
                         Contato
                     </h2>
                     <p className='mb-8 text-xl text-gray-600'>
-                        Fale conosco através do formulário abaixo ou por nossas
-                        redes sociais.
+                        Entre em contato conosco através dos canais abaixo:
                     </p>
                 </div>
             </div>
@@ -41,7 +40,7 @@ export default function Contact() {
                             </p>
                         </li>
                         <br className='md:hidden' />
-                        <li className='flex flex-col gap-2'>
+                        <li className='flex flex-col items-center gap-2'>
                             <p className='text-gray-600'>Redes sociais</p>
                             <div className='flex flex-row'>
                                 <a
