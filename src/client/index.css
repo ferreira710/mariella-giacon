@@ -27,3 +27,27 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f7fafc;
 }
+
+.customModal {
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+}
+
+.customOverlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .customModal {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+}

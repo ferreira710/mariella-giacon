@@ -80,14 +80,14 @@ export default function Features() {
     }, [])
 
     return (
-        <section id="portifolio" className="relative bg-white">
-            <div className="mx-auto max-w-6xl px-4 sm:px-6">
-                <div className="py-12 md:py-20">
-                    <div className="mx-auto max-w-3xl pb-8 text-end md:pb-8">
-                        <h2 className="font-heading mb-4 text-3xl font-bold md:text-4xl">
+        <section id='portifolio' className='relative bg-white'>
+            <div className='mx-auto max-w-6xl px-4 sm:px-6'>
+                <div className='py-12 md:py-20'>
+                    <div className='mx-auto max-w-3xl pb-8 text-end md:pb-8'>
+                        <h2 className='font-heading mb-4 text-3xl font-bold md:text-4xl'>
                             Portifólio
                         </h2>
-                        <p className="text-xl text-gray-600">
+                        <p className='text-xl text-gray-600'>
                             Nossa proposta final é feita depois de entender
                             todas as necessidades, características e escolha de
                             cada projeto. No entanto através deste portifólio,
@@ -95,14 +95,14 @@ export default function Features() {
                             valores.
                         </p>
                     </div>
-                    <div className="slider-container">
+                    <div className='slider-container'>
                         <Swiper {...settings}>
                             {projectArray.map((image, index) => (
                                 <SwiperSlide key={index}>
                                     <img
-                                        className="flex h-96 w-full object-cover"
+                                        className='flex h-96 w-full object-cover'
                                         src={image}
-                                        alt=""
+                                        alt=''
                                         onClick={() => {
                                             setOpen(true)
                                             const clickedProject =
@@ -120,6 +120,11 @@ export default function Features() {
                     </div>
                 </div>
                 <Modal
+                    classNames={{
+                        modal: 'customModal',
+                        overlay: 'customOverlay',
+                        closeIcon: 'customCloseIcon',
+                    }}
                     blockScroll
                     open={open}
                     onClose={() => {
@@ -128,6 +133,7 @@ export default function Features() {
                     }}
                     center
                     showCloseIcon={false}
+                    closeIcon={null}
                 >
                     <Carousel
                         selectedProject={selectedProject}
