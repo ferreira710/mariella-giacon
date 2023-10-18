@@ -59,14 +59,14 @@ export default function Carousel({ selectedProject, setOpen }: Props) {
                     }
                 }
             } catch (error) {
-                console.log(error)
+                throw new Error(String(error))
             }
         }
         getImages()
     }, [selectedProject])
 
     return (
-        <Swiper>
+        <Swiper loop>
             {projectArray &&
                 projectArray.map((image, index) => (
                     <SwiperSlide key={index}>

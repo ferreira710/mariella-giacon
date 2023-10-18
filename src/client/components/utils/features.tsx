@@ -111,6 +111,7 @@ export default function Features() {
                         </p>
                     </div>
                     <Swiper
+                        loop
                         direction='horizontal'
                         modules={[Navigation, Pagination, A11y]}
                         navigation
