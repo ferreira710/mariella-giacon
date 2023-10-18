@@ -2,13 +2,13 @@
 
 import { S3 } from '@aws-sdk/client-s3'
 import { useEffect, useRef, useState } from 'react'
+import Modal from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
-import 'swiper/css'
+import 'swiper/css/a11y'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-import Modal from 'react-responsive-modal'
+import { A11y, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { S3_IMAGE_BUCKET } from '../../config/settings'
 import Carousel from '../ui/carousel'
 
@@ -17,6 +17,8 @@ export default function Features() {
     const [projectArray, setProjectArray] = useState([])
     const [selectedProject, setSelectedProject] = useState(null)
     const [activeSlide, setActiveSlide] = useState(0)
+
+    const swiper = useSwiper()
 
     const tabs = useRef<HTMLDivElement>(null)
 
@@ -30,10 +32,10 @@ export default function Features() {
                 slidesPerView: 3,
             },
         },
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
+    }
+
+    const handleSlideChange = () => {
+        setActiveSlide(swiper?.realIndex)
     }
 
     const handleInit = () => {
@@ -108,19 +110,23 @@ export default function Features() {
                             valores.
                         </p>
                     </div>
-                    <div className='slider-container'>
-                        <Swiper
-                            {...settings}
-                            pagination={{
-                                bulletClass: 'customBullets',
-                                clickable: true,
-                            }}
-                            navigation
-                            direction='horizontal'
-                            keyboard
-                            allowTouchMove
-                        >
-                            {projectArray.map((image, index) => (
+                    <Swiper
+                        direction='horizontal'
+                        modules={[Navigation, Pagination, A11y]}
+                        navigation
+                        pagination={{ clickable: true }}
+                        onSwiper={handleSlideChange}
+                        onSlideChange={handleSlideChange}
+                        {...settings}
+                    >
+                        {projectArray
+                            .sort((a, b) => {
+                                const aIndex = (a as string).split('.')[0]
+                                const bIndex = (b as string).split('.')[0]
+
+                                return parseInt(aIndex) - parseInt(bIndex)
+                            })
+                            .map((image, index) => (
                                 <SwiperSlide key={index}>
                                     <img
                                         className='flex h-96 w-full object-cover'
@@ -139,35 +145,34 @@ export default function Features() {
                                     />
                                 </SwiperSlide>
                             ))}
-                        </Swiper>
-                    </div>
+                    </Swiper>
                 </div>
-                <Modal
-                    classNames={{
-                        modal: 'customModal',
-                        overlay: 'customOverlay',
-                        closeIcon: 'customCloseIcon',
-                    }}
-                    blockScroll
-                    open={open}
+            </div>
+            <Modal
+                classNames={{
+                    modal: 'customModal',
+                    overlay: 'customOverlay',
+                    closeIcon: 'customCloseIcon',
+                }}
+                blockScroll
+                open={open}
+                onClose={() => {
+                    setOpen(false)
+                    setSelectedProject(null)
+                }}
+                center
+                showCloseIcon={false}
+                closeIcon={null}
+            >
+                <Carousel
+                    selectedProject={selectedProject}
                     onClose={() => {
                         setOpen(false)
                         setSelectedProject(null)
                     }}
-                    center
-                    showCloseIcon={false}
-                    closeIcon={null}
-                >
-                    <Carousel
-                        selectedProject={selectedProject}
-                        onClose={() => {
-                            setOpen(false)
-                            setSelectedProject(null)
-                        }}
-                        setOpen={setOpen}
-                    />
-                </Modal>
-            </div>
+                    setOpen={setOpen}
+                />
+            </Modal>
         </section>
     )
 }
