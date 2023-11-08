@@ -5,14 +5,13 @@
 @font-face {
     font-family: 'Saudagar';
     src:
-        local('Saudagar'),
-        url(assets/Saudagar.ttf) format('ttf');
+        url('assets/fonts/saudagar.woff2') format('woff2'),
+        url('assets/fonts/saudagar.woff') format('woff'),
+        url('assets/fonts/saudagar.ttf') format('truetype');
 }
 
-* {
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
+#hero-title {
+    font-family: 'Saudagar';
 }
 
 html,
@@ -23,7 +22,36 @@ body {
     height: 100%;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f7fafc;
+.customModal {
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+}
+
+.customOverlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .customModal {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
