@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "clean": "rm -rf node_modules && rm -rf package-lock.json && rm -rf bun.lockb && npm i && npm run dev"
+        "clear": "rm -rf node_modules package-lock.json"
     },
     "dependencies": {
         "@aws-sdk/client-s3": "^3.409.0",
