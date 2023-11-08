@@ -18,22 +18,22 @@ export default function Contact() {
             </div>
             <div className=' flex w-full flex-col md:ml-auto md:flex-row md:items-center md:justify-center md:gap-8'>
                 <div className='flex flex-col px-4 text-lg'>
-                    <ul className='flex flex-col md:gap-8'>
+                    <ul className='flex flex-col gap-4'>
                         <li className='mb-2'>
-                            <p className='break-words break-all text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>Endereço: </strong>
                                 Rua 7 de Setembro, 717 - Sala 5 - Centro -
                                 Limeira/SP
                             </p>
                         </li>
                         <li className='mb-2'>
-                            <p className='break-words break-all text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>Telefone: </strong> (19) 97166-4121 /
                                 (19) 98166-4121
                             </p>
                         </li>
                         <li className='mb-2'>
-                            <p className='break-words break-all text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>E-mail: </strong>
                                 paisagismomariellagiacon@gmail.com /
                                 mariellagiaconv@gmail.com
@@ -41,7 +41,7 @@ export default function Contact() {
                         </li>
                         <br className='md:hidden' />
                         <li className='flex flex-col items-center gap-2'>
-                            <p className='text-gray-600'>Redes sociais</p>
+                            <p className='text-gray-600'>Redes sociais:</p>
                             <div className='flex flex-row'>
                                 <a
                                     href='https://wa.me/5519971664121'

@@ -9,6 +9,9 @@ export default {
     ],
     theme: {
         extend: {
+            screens: {
+                profileImage: '1112px',
+            },
             fontFamily: {
                 saudagar: ['Saudagar'],
             },

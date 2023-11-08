@@ -106,8 +106,7 @@ export default function Features() {
                             Nossa proposta final é feita depois de entender
                             todas as necessidades, características e escolha de
                             cada projeto. No entanto através deste portifólio,
-                            você poderá ter uma ideia base dos nossos serviços e
-                            valores.
+                            você poderá ter uma ideia base dos nossos serviços.
                         </p>
                     </div>
                     <Swiper

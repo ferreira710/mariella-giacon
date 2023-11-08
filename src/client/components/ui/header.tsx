@@ -41,20 +41,20 @@ export default function Header() {
         >
             <Navbar onMenuOpenChange={setIsMenuOpen}>
                 <NavbarContent>
-                    <NavbarBrand className="flex">
+                    <NavbarBrand className='flex'>
                         <Image
                             src={`${S3_IMAGE_BUCKET}/logoSite.png`}
                             width={150}
                         />
                     </NavbarBrand>
                 </NavbarContent>
-                <NavbarContent className="hidden gap-4 sm:flex">
+                <NavbarContent className='hidden gap-4 sm:flex'>
                     {menuItems.map((item, index) => (
                         <NavbarItem key={`${item}-${index}`}>
                             <Link
-                                className="w-full cursor-pointer"
+                                className='w-full cursor-pointer'
                                 to={cleanText(item.toLowerCase())}
-                                color="foreground"
+                                color='foreground'
                                 smooth={true}
                                 duration={500}
                             >
@@ -63,19 +63,19 @@ export default function Header() {
                         </NavbarItem>
                     ))}
                 </NavbarContent>
-                <NavbarContent justify="end">
+                <NavbarContent justify='end'>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-                        className="sm:hidden"
+                        className='sm:hidden'
                     />
                 </NavbarContent>
                 <NavbarMenu>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
-                                className="w-full cursor-pointer"
+                                className='w-full cursor-pointer'
                                 to={cleanText(item.toLowerCase())}
-                                color="foreground"
+                                color='foreground'
                                 smooth={true}
                                 duration={500}
                             >
