@@ -6,6 +6,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { S3_IMAGE_BUCKET } from '../../../config/settings'
+import ImageBanner from '../../utils/imageBanner'
 
 interface Props {
     selectedProject: string | null
@@ -70,6 +71,9 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
             {projectArray &&
                 projectArray.map((image, index) => (
                     <SwiperSlide key={index}>
+                        {selectedProject?.match(
+                            /projetos\/thumbnails\/projeto0|projeto12\.jpg/
+                        ) && <ImageBanner text={'Fávaro Jr.'} />}
                         <img src={image} alt='' />
                         <div className='absolute right-0 top-0 flex items-center justify-end p-2'>
                             <CgClose

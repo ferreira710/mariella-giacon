@@ -49,9 +49,29 @@ body {
 .swiper-button-prev,
 .swiper-button-next {
     color: #fff;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+.swiper-slide.swiper-slide-active {
+    align-self: center;
 }
