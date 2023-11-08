@@ -10,7 +10,7 @@ import {
 } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-scroll'
-import { S3_IMAGE_BUCKET } from '../../config/settings'
+import { S3_IMAGE_BUCKET } from '../../../config/settings'
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [top, setTop] = useState<boolean>(true)

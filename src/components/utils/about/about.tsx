@@ -1,4 +1,4 @@
-import { S3_IMAGE_BUCKET } from '../../config/settings'
+import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 export default function About() {
     return (

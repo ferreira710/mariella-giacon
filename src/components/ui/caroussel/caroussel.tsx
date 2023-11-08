@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { S3_IMAGE_BUCKET } from '../../config/settings'
+import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 interface Props {
     selectedProject: string | null
@@ -13,7 +13,7 @@ interface Props {
     onClose: () => void
 }
 
-export default function Carousel({ selectedProject, setOpen }: Props) {
+export default function Caroussel({ selectedProject, setOpen }: Props) {
     const [projectArray, setProjectArray] = useState([])
 
     useEffect(() => {

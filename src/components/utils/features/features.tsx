@@ -9,8 +9,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import { S3_IMAGE_BUCKET } from '../../config/settings'
-import Carousel from '../ui/carousel'
+import { S3_IMAGE_BUCKET } from '../../../config/settings'
+import Carousel from '../../ui/caroussel/caroussel'
 
 export default function Features() {
     const [open, setOpen] = useState(false)

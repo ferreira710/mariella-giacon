@@ -1,7 +1,7 @@
 import { Image } from '@nextui-org/react'
 import { CgInstagram } from 'react-icons/cg'
 import { FaFacebookSquare, FaLinkedinIn } from 'react-icons/fa'
-import { S3_IMAGE_BUCKET } from '../../config/settings'
+import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 export default function Footer() {
     return (
