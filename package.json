@@ -1,10 +1,9 @@
 {
-    "name": "my-project",
+    "name": "mariella-giacon",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "scripts": {
         "dev": "vite",
-        "start": "NODE_ENV=production ts-node src/server/main.ts",
         "build": "vite build",
         "clean": "rm -rf node_modules && rm -rf package-lock.json && rm -rf bun.lockb && npm i && npm run dev"
     },
