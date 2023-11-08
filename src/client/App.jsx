@@ -9,24 +9,22 @@ import Services from './components/utils/services'
 
 export default function App() {
     return (
-        <>
-            <div className='flex h-screen flex-col justify-between'>
-                <header>
-                    <Header />
-                </header>
-                <main id='home' className='mb-auto flex w-full flex-col pt-16'>
-                    {/* <Banner /> */}
-                    <Hero />
-                    <About />
-                    <Features />
-                    <Services />
-                    <Contact />
-                </main>
-                <footer>
-                    <Footer />
-                </footer>
-            </div>
-            <ScrollTop />
-        </>
+        <div className='flex h-screen flex-col justify-between'>
+            <header>
+                <Header />
+            </header>
+            <main id='home' className='mb-auto flex w-full flex-col pt-16'>
+                {/* <Banner /> */}
+                <Hero />
+                <About />
+                <Features />
+                <Services />
+                <Contact />
+                <ScrollTop />
+            </main>
+            <footer>
+                <Footer />
+            </footer>
+        </div>
     )
 }
