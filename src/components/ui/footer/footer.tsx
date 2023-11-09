@@ -13,7 +13,7 @@ export default function Footer() {
                             <Image
                                 className='h-20'
                                 src={`${S3_IMAGE_BUCKET}/logoSite.png`}
-                                alt={'Logo Mariella Giacon'}
+                                alt={'Logo do site'}
                             />
                         </div>
                     </div>

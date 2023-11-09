@@ -52,7 +52,7 @@ export default function Contact() {
                                         src='https://img.icons8.com/fluent/48/000000/whatsapp.png'
                                         width={48}
                                         height={48}
-                                        alt='WhatsApp'
+                                        alt='Logo do WhatsApp'
                                     />
                                 </a>
                                 <a
@@ -64,7 +64,7 @@ export default function Contact() {
                                         src='https://img.icons8.com/fluent/48/000000/facebook-new.png'
                                         width={48}
                                         height={48}
-                                        alt='Facebook'
+                                        alt='Logo do Facebook'
                                     />
                                 </a>
                                 <a
@@ -76,7 +76,7 @@ export default function Contact() {
                                         src='https://img.icons8.com/fluent/48/000000/instagram-new.png'
                                         width={48}
                                         height={48}
-                                        alt='Instagram'
+                                        alt='Logo do Instagram'
                                     />
                                 </a>
                                 <a
@@ -88,7 +88,7 @@ export default function Contact() {
                                         src='https://img.icons8.com/fluent/48/000000/linkedin.png'
                                         width={48}
                                         height={48}
-                                        alt='LinkedIn'
+                                        alt='Logo do LinkedIn'
                                     />
                                 </a>
                             </div>

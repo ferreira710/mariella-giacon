@@ -43,6 +43,7 @@ export default function Header() {
                 <NavbarContent>
                     <NavbarBrand className='flex'>
                         <Image
+                            alt='Logo do site'
                             src={`${S3_IMAGE_BUCKET}/logoSite.png`}
                             width={150}
                         />
