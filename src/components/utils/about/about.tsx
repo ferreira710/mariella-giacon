@@ -11,7 +11,7 @@ export default function About() {
                     <img
                         className='tablet:h-auto tablet:w-auto mx-auto h-[320px] w-[320px] rounded-full object-cover'
                         src={`${S3_IMAGE_BUCKET}/fotoPerfil.jpeg`}
-                        alt='Descrição da Imagem'
+                        alt='Arquiteta Mariella Giacon sentada em um banco de ferro em um jardim com as pernas cruzadas, mãos entrelaçadas em cima do joelho e um sorriso no rosto'
                     />
                 </div>
                 <div className='mx-auto max-w-3xl'>

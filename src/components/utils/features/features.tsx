@@ -1,5 +1,3 @@
-'use client'
-
 import { S3 } from '@aws-sdk/client-s3'
 import { useEffect, useRef, useState } from 'react'
 import Modal from 'react-responsive-modal'
@@ -35,11 +33,11 @@ export default function Features() {
     }
 
     const handleSlideChange = () => {
-        setActiveSlide(swiper?.realIndex)
+        setActiveSlide(activeSlide + 1)
     }
 
     const handleInit = () => {
-        setActiveSlide(0)
+        setActiveSlide(swiper?.activeIndex || 0)
     }
 
     useEffect(() => {
@@ -113,6 +111,13 @@ export default function Features() {
                         loop
                         direction='horizontal'
                         modules={[Navigation, Pagination, A11y]}
+                        a11y={{
+                            prevSlideMessage: 'Imagem anterior',
+                            nextSlideMessage: 'Próxima imagem',
+                            firstSlideMessage: 'Primeira imagem do carrossel',
+                            lastSlideMessage: 'Última imagem do carrossel',
+                        }}
+                        keyboard
                         navigation
                         pagination={{ clickable: true }}
                         onSwiper={handleSlideChange}
@@ -131,7 +136,7 @@ export default function Features() {
                                     <img
                                         className='flex h-96 w-full object-cover'
                                         src={image}
-                                        alt=''
+                                        alt='Carrossel de imagens com a capa dos projetos'
                                         onClick={() => {
                                             setOpen(true)
                                             const clickedProject =
