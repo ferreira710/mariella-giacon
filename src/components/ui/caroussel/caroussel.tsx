@@ -94,7 +94,7 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
                     <SwiperSlide key={index}>
                         {selectedProject?.match(
                             /projetos\/thumbnails\/projeto0|projeto12\.jpg/
-                        ) && <ImageBanner text={'Fávaro Jr.'} />}
+                        ) && <ImageBanner text={'Fotografia:  Fávaro Jr.'} />}
                         <img
                             src={image}
                             alt='Carrossel de imagens do projeto selecionado'
