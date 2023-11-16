@@ -93,7 +93,7 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
                 projectArray.map((image, index) => (
                     <SwiperSlide key={index}>
                         {selectedProject?.match(
-                            /projetos\/thumbnails\/projeto0|projeto12\.jpg/
+                            /projetos\/thumbnails\/projeto00|projeto01\.jpg/
                         ) && <ImageBanner text={'Fotografia:  Fávaro Jr.'} />}
                         <img
                             src={image}
