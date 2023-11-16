@@ -57,7 +57,7 @@ export default function Header() {
                 !top ? ' shadow-lg backdrop-blur-sm' : ''
             }`}
         >
-            <Navbar onMenuOpenChange={setIsMenuOpen}>
+            <Navbar onMenuOpenChange={setIsMenuOpen} className='text-text'>
                 <NavbarContent>
                     <NavbarBrand>
                         <Image

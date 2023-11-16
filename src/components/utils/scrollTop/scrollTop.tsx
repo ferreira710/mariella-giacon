@@ -29,7 +29,7 @@ export default function ScrollTop() {
         <button
             className={`${
                 visible ? 'animate-fade-in block' : 'hidden'
-            } fixed bottom-0 right-0 z-50 m-4 flex h-12 w-12 items-center justify-center rounded-full  p-2 shadow-md shadow-green-800 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none`}
+            } fixed bottom-0 right-0 z-50 m-4 flex h-12 w-12 items-center justify-center rounded-full bg-white p-2 shadow-md shadow-green-800 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none`}
             onClick={scrollToTop}
             aria-label='Scrollar para o topo da página'
             title='Scrollar para o topo da página'

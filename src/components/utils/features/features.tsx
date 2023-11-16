@@ -93,7 +93,7 @@ export default function Features() {
     }, [])
 
     return (
-        <section id='portifolio' className='relative bg-secondary '>
+        <section id='portifolio' className='text-text relative bg-secondary'>
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='py-12 md:py-20'>
                     <div className='mx-auto max-w-6xl pb-8 md:pb-8'>

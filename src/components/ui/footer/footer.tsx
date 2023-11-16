@@ -5,7 +5,7 @@ import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 export default function Footer() {
     return (
-        <footer className='bg-background'>
+        <footer className='text-text bg-background'>
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='grid gap-8 border-t border-gray-200 py-8 sm:grid-cols-12 md:py-12'>
                     <div className='sm:col-span-12 lg:col-span-4'>

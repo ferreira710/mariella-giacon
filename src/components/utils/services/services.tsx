@@ -2,7 +2,7 @@ export default function Services() {
     return (
         <section
             id='servicos'
-            className='flex w-full flex-col items-center bg-background py-12 md:py-20'
+            className='text-text flex w-full flex-col items-center bg-background py-12 md:py-20'
         >
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='mx-auto max-w-3xl'>
