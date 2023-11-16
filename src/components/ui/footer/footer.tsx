@@ -5,7 +5,7 @@ import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 export default function Footer() {
     return (
-        <footer className='bg-white'>
+        <footer className=''>
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='grid gap-8 border-t border-gray-200 py-8 sm:grid-cols-12 md:py-12'>
                     <div className='sm:col-span-12 lg:col-span-4'>
@@ -28,7 +28,7 @@ export default function Footer() {
                                 <a
                                     href='https://www.instagram.com/mariellagiaconpaisagismo/'
                                     target='_blank'
-                                    className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'
+                                    className=' transition duration-150 ease-in-out hover:text-gray-900'
                                 >
                                     Instagram
                                 </a>
@@ -38,7 +38,7 @@ export default function Footer() {
                                 <a
                                     href='https://www.facebook.com/mariellagiaconv/?locale=pt_BR'
                                     target='_blank'
-                                    className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'
+                                    className=' transition duration-150 ease-in-out hover:text-gray-900'
                                 >
                                     Facebook
                                 </a>
@@ -48,7 +48,7 @@ export default function Footer() {
                                 <a
                                     href='https://www.linkedin.com/in/mariella-giacon-07954a178/'
                                     target='_blank'
-                                    className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'
+                                    className=' transition duration-150 ease-in-out hover:text-gray-900'
                                 >
                                     LinkedIn
                                 </a>
@@ -62,18 +62,18 @@ export default function Footer() {
                         </h6>
                         <ul className='text-sm'>
                             <li className='mb-2'>
-                                <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                                <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                     Endereço: Rua 7 de Setembro, 717 - Sala 5 -
                                     Centro - Limeira/SP
                                 </p>
                             </li>
                             <li className='mb-2'>
-                                <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                                <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                     Telefone: (19) 97166-4121 / (19) 98166-4121
                                 </p>
                             </li>
                             <li className='mb-2'>
-                                <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                                <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                     E-mail: paisagismomariellagiacon@gmail.com
                                 </p>
                             </li>
@@ -81,7 +81,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='border-t border-gray-200 py-4 md:flex md:items-center md:justify-between md:py-8'>
-                    <div className='mr-4 text-sm text-gray-600'>
+                    <div className='mr-4 text-sm '>
                         &copy; Mariella Giacon. Todos os direitos reservados.
                     </div>
                 </div>

@@ -10,8 +10,23 @@
         url('assets/fonts/saudagar.ttf') format('truetype');
 }
 
+@keyframes kenburns-top {
+    0% {
+        transform: scale(1.25) translateY(-25px);
+        transform-origin: top;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        transform-origin: 50% 16%;
+    }
+}
+
 #hero-title {
     font-family: 'Saudagar';
+}
+
+#kenburns-top {
+    animation: kenburns-top 5s ease-out both;
 }
 
 html,
@@ -20,6 +35,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    color: #150a1a;
 }
 
 .customModal {

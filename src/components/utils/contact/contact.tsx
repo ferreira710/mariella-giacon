@@ -4,14 +4,14 @@ export default function Contact() {
     return (
         <section
             id='contato'
-            className='flex w-full flex-col items-center bg-white py-12 md:py-20'
+            className='flex w-full flex-col items-center bg-secondary py-12 md:py-20'
         >
             <div className='mx-auto max-w-6xl px-4 pb-6 sm:px-6 md:pb-0'>
                 <div className='mx-auto max-w-3xl text-center'>
                     <h2 className='font-heading mb-4 text-3xl font-bold  md:text-4xl'>
                         Contato
                     </h2>
-                    <p className='mb-8 text-xl text-gray-600'>
+                    <p className='mb-8 text-xl '>
                         Entre em contato conosco através dos canais abaixo:
                     </p>
                 </div>
@@ -20,20 +20,20 @@ export default function Contact() {
                 <div className='flex flex-col px-4 text-lg'>
                     <ul className='flex flex-col gap-4'>
                         <li className='mb-2'>
-                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>Endereço: </strong>
                                 Rua 7 de Setembro, 717 - Sala 5 - Centro -
                                 Limeira/SP
                             </p>
                         </li>
                         <li className='mb-2'>
-                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>Telefone: </strong> (19) 97166-4121 /
                                 (19) 98166-4121
                             </p>
                         </li>
                         <li className='mb-2'>
-                            <p className='text-gray-600 transition duration-150 ease-in-out hover:text-gray-900'>
+                            <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>E-mail: </strong>
                                 paisagismomariellagiacon@gmail.com /
                                 mariellagiaconv@gmail.com
@@ -41,7 +41,7 @@ export default function Contact() {
                         </li>
                         <br className='md:hidden' />
                         <li className='flex flex-col items-center gap-2'>
-                            <p className='text-gray-600'>Redes sociais:</p>
+                            <p className=''>Redes sociais:</p>
                             <div className='flex flex-row'>
                                 <a
                                     href='https://wa.me/5519971664121'

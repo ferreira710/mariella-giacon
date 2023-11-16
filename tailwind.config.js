@@ -16,12 +16,11 @@ export default {
                 saudagar: ['Saudagar'],
             },
             colors: {
-                bg: {
-                    DEFAULT: '#f7fafc',
-                },
-                container: {
-                    DEFAULT: '#f0fdf5',
-                },
+                text: '#101b0e',
+                background: '#ecf4eb',
+                primary: '#77b36f',
+                secondary: '#cde3ca',
+                accent: '#4f8547',
             },
         },
     },

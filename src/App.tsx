@@ -1,9 +1,11 @@
+import Banner from './components/ui/banner'
 import Footer from './components/ui/footer'
 import Header from './components/ui/header'
+import Logo from './components/ui/logo'
 import About from './components/utils/about'
 import Contact from './components/utils/contact'
 import Features from './components/utils/features'
-import Hero from './components/utils/hero'
+import Purpose from './components/utils/purpose'
 import ScrollTop from './components/utils/scrollTop'
 import Services from './components/utils/services'
 
@@ -14,9 +16,11 @@ export default function App() {
                 <Header />
             </header>
             <main id='home' className='mb-auto flex w-full flex-col pt-16'>
-                {/* <Banner /> */}
-                <Hero />
+                <Logo />
+                <Banner />
+                {/* <Hero /> */}
                 <About />
+                <Purpose />
                 <Features />
                 <Services />
                 <Contact />
