@@ -2,14 +2,14 @@ export default function Services() {
     return (
         <section
             id='servicos'
-            className='text-text flex w-full flex-col items-center bg-background py-12 md:py-20'
+            className='flex w-full flex-col items-center bg-background py-12 text-text md:py-20'
         >
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='mx-auto max-w-3xl'>
                     <h2 className='font-heading mb-4 text-3xl font-bold md:text-4xl'>
                         Serviços
                     </h2>
-                    <ul className='text-xl '>
+                    <ul className='flex flex-col gap-6 text-xl'>
                         <li>
                             <b>- Projeto paisagístico (arquitetura):</b> {''}
                             Planta baixa, detalhamento e Maquete 3d.
@@ -19,14 +19,12 @@ export default function Services() {
                             luminotécnicos, hidráulicos e orientação para
                             irrigação do jardim.
                         </li>
-                        <br />
                         <li>
                             <b>- Assessoria:</b> Assessoria para elaboração ou
                             reforma de jardim. Apresentação em planta baixa
                             (2D), imagens das espécies e sugestão de pontos para
                             iluminação do paisagismo.
                         </li>
-                        <br />
                         <li>
                             <b>- Execução de jardim:</b> Com o projeto
                             paisagístico aprovado, partimos para a execução do
@@ -35,7 +33,6 @@ export default function Services() {
                             mão de obra e insumos. Seu espaço pronto para você
                             relaxar e aproveitar.
                         </li>
-                        <br />
                         <li>
                             <b>- Diferenciais Exclusivos:</b>
                             <ul className='list-disc px-8 text-xl '>

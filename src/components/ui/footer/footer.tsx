@@ -5,13 +5,15 @@ import { S3_IMAGE_BUCKET } from '../../../config/settings'
 
 export default function Footer() {
     return (
-        <footer className='text-text bg-background'>
+        <footer className='bg-background text-text'>
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='grid gap-8 border-t border-gray-200 py-8 sm:grid-cols-12 md:py-12'>
                     <div className='sm:col-span-12 lg:col-span-4'>
                         <div className='mb-2'>
                             <Image
                                 className='h-20'
+                                width={205}
+                                height={80}
                                 src={`${S3_IMAGE_BUCKET}/logoSite.png`}
                                 alt={'Logo do site'}
                             />
@@ -19,9 +21,9 @@ export default function Footer() {
                     </div>
 
                     <div className='sm:col-span-6 md:col-span-3 lg:col-span-3'>
-                        <h6 className='mb-2 font-medium text-gray-800'>
+                        <p className='mb-2 font-medium text-gray-800'>
                             Redes sociais
-                        </h6>
+                        </p>
                         <ul className='text-sm'>
                             <li className='mb-2 flex items-center gap-1'>
                                 <CgInstagram />
@@ -57,9 +59,9 @@ export default function Footer() {
                     </div>
 
                     <div className='sm:col-span-10 md:col-span-6 lg:col-span-4'>
-                        <h6 className='mb-2 font-medium text-gray-800'>
+                        <p className='mb-2 font-medium text-gray-800'>
                             O escritório
-                        </h6>
+                        </p>
                         <ul className='text-sm'>
                             <li className='mb-2'>
                                 <p className=' transition duration-150 ease-in-out hover:text-gray-900'>

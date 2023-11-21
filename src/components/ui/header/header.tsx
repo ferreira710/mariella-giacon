@@ -59,16 +59,19 @@ export default function Header() {
         >
             <Navbar onMenuOpenChange={setIsMenuOpen} className='text-text'>
                 <NavbarContent>
-                    <NavbarBrand>
-                        <Image
-                            className={`${
-                                visible ? 'animate-appearance-in' : 'hidden'
-                            } transition duration-500 ease-in-out`}
-                            alt='Logo do site'
-                            src={`${S3_IMAGE_BUCKET}/logoSite.png`}
-                            width={156}
-                        />
-                    </NavbarBrand>
+                    <li>
+                        <NavbarBrand>
+                            <Image
+                                className={`${
+                                    visible ? 'animate-appearance-in' : 'hidden'
+                                } transition duration-500 ease-in-out`}
+                                alt='Logo do site'
+                                src={`${S3_IMAGE_BUCKET}/logoSite.png`}
+                                width={156}
+                                height={61}
+                            />
+                        </NavbarBrand>
+                    </li>
                 </NavbarContent>
                 <NavbarContent className='hidden w-full gap-4 sm:flex'>
                     {menuItems.map((item, index) => (
@@ -79,6 +82,7 @@ export default function Header() {
                                 color='foreground'
                                 smooth={true}
                                 duration={500}
+                                href='#'
                             >
                                 {item}
                             </Link>
@@ -92,19 +96,22 @@ export default function Header() {
                     />
                 </NavbarContent>
                 <NavbarMenu>
-                    {menuItems.map((item, index) => (
-                        <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link
-                                className='w-full cursor-pointer'
-                                to={cleanText(item.toLowerCase())}
-                                color='foreground'
-                                smooth={true}
-                                duration={500}
-                            >
-                                {item}
-                            </Link>
-                        </NavbarMenuItem>
-                    ))}
+                    <li>
+                        {menuItems.map((item, index) => (
+                            <NavbarMenuItem key={`${item}-${index}`}>
+                                <Link
+                                    className='w-full cursor-pointer'
+                                    to={cleanText(item.toLowerCase())}
+                                    color='foreground'
+                                    smooth={true}
+                                    duration={500}
+                                    href='#'
+                                >
+                                    {item}
+                                </Link>
+                            </NavbarMenuItem>
+                        ))}
+                    </li>
                 </NavbarMenu>
             </Navbar>
         </header>

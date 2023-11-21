@@ -98,6 +98,8 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
                         <img
                             src={image}
                             alt='Carrossel de imagens do projeto selecionado'
+                            width={358}
+                            height={384}
                         />
                         <div className='absolute right-0 top-0 flex items-center justify-end p-2'>
                             <CgClose
