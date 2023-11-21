@@ -98,8 +98,8 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
                         <img
                             src={`${image}?format=webp`}
                             alt='Carrossel de imagens do projeto selecionado'
-                            width={358}
-                            height={384}
+                            width={600}
+                            height={800}
                         />
                         <div className='absolute right-0 top-0 flex items-center justify-end p-2'>
                             <CgClose
