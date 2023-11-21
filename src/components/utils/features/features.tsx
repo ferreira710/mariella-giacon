@@ -93,7 +93,7 @@ export default function Features() {
     }, [])
 
     return (
-        <section id='portifolio' className='text-text relative bg-secondary'>
+        <section id='portifolio' className='relative bg-secondary text-text'>
             <div className='mx-auto max-w-6xl px-4 sm:px-6'>
                 <div className='py-12 md:py-20'>
                     <div className='mx-auto max-w-6xl pb-8 md:pb-8'>
@@ -135,7 +135,7 @@ export default function Features() {
                                 <SwiperSlide key={index}>
                                     <img
                                         className='flex h-96 w-full object-cover'
-                                        src={image}
+                                        src={`${image}?format=webp`}
                                         alt='Carrossel de imagens com a capa dos projetos'
                                         onClick={() => {
                                             setOpen(true)

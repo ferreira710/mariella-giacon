@@ -96,7 +96,7 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
                             /projetos\/thumbnails\/projeto00|projeto01\.jpg/
                         ) && <ImageBanner text={'Fotografia:  Fávaro Jr.'} />}
                         <img
-                            src={image}
+                            src={`${image}?format=webp`}
                             alt='Carrossel de imagens do projeto selecionado'
                             width={358}
                             height={384}
