@@ -65,8 +65,8 @@ export default function Footer() {
                         <ul className='text-sm'>
                             <li className='mb-2'>
                                 <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
-                                    Endereço: Rua 7 de Setembro, 717 - Sala 5 -
-                                    Centro - Limeira/SP
+                                    Endereço: Rua Dr. Humberto Levy, 118, Vila
+                                    Paraíso - 13480-752 - Limeira/SP
                                 </p>
                             </li>
                             <li className='mb-2'>

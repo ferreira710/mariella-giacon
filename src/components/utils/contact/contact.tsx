@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <section
             id='contato'
-            className='text-text flex w-full flex-col items-center bg-secondary py-12 md:py-20'
+            className='flex w-full flex-col items-center bg-secondary py-12 text-text md:py-20'
         >
             <div className='mx-auto max-w-6xl px-4 pb-6 sm:px-6 md:pb-0'>
                 <div className='mx-auto max-w-3xl text-center'>
@@ -22,8 +22,8 @@ export default function Contact() {
                         <li className='mb-2'>
                             <p className=' transition duration-150 ease-in-out hover:text-gray-900'>
                                 <strong>Endereço: </strong>
-                                Rua 7 de Setembro, 717 - Sala 5 - Centro -
-                                Limeira/SP
+                                Rua Dr. Humberto Levy, 118, Vila Paraíso -
+                                13480-752 - Limeira/SP
                             </p>
                         </li>
                         <li className='mb-2'>
