@@ -3,6 +3,10 @@ import { useEffect, useRef, useState } from 'react'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import Carousel from '../../ui/caroussel/caroussel'
+import 'swiper/css'
+import 'swiper/css/a11y'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 export default function Features() {
   const [open, setOpen] = useState(false)

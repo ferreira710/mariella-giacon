@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import ImageBanner from '../../utils/imageBanner'
+import 'swiper/css'
+import 'swiper/css/a11y'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 interface Props {
   selectedProject: string | null
