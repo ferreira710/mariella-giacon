@@ -26,5 +26,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@nextui-org/react']
   },
+  publicDir: '/src/assets/static',
   plugins: [react()]
 })

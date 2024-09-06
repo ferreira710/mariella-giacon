@@ -2,11 +2,11 @@
   "name": "Mariella Giacon - Arquitetura Paisagística",
   "description": "Arquitetura paisagística sustentável em Limeira. Projetos personalizados, assessoria e execução de jardins com plantas nativas.",
   "short_name": "Mariella Giacon",
-  "start_url": "https://mariellagiacon.com.br/",
+  "start_url": "https://www.mariellagiacon.com.br/",
   "lang": "pt-BR",
   "theme_color": "#CDE3CA",
   "display": "standalone",
-  "background_color": "#FFFFFF",
+  "background_color": "#ECF4EB",
   "orientation": "any",
   "icons": [
     {
@@ -24,22 +24,26 @@
     {
       "src": "/assets/screenshots/screenshot1.png",
       "sizes": "1920x1080",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide"
     },
     {
       "src": "/assets/screenshots/screenshot2.png",
       "sizes": "1920x1080",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide"
     },
     {
       "src": "/assets/screenshots/screenshot3.png",
       "sizes": "1920x1080",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide"
     },
     {
       "src": "/assets/screenshots/screenshot4.png",
       "sizes": "1920x1080",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
