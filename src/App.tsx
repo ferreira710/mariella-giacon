@@ -10,25 +10,22 @@ import ScrollTop from './components/utils/scrollTop'
 import Services from './components/utils/services'
 
 export default function App() {
-    return (
-        <div className='flex h-screen flex-col justify-between'>
-            <header>
-                <Header />
-            </header>
-            <main id='home' className='mb-auto flex w-full flex-col pt-16'>
-                <Logo />
-                <Banner />
-                {/* <Hero /> */}
-                <About />
-                <Purpose />
-                <Features />
-                <Services />
-                <Contact />
-                <ScrollTop />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    )
+  return (
+    <div className="flex h-screen flex-col justify-between">
+      <Header />
+      <main id="home" className="mb-auto flex w-full flex-col pt-16">
+        <Logo />
+        <Banner />
+        <About />
+        <Purpose />
+        <Features />
+        <Services />
+        <Contact />
+        <ScrollTop />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
+  )
 }

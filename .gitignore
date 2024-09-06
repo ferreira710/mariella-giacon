@@ -1,26 +1,55 @@
-# Logs
-logs
+# Ignorar diretórios de dependências
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Ignorar pastas de build
+dist/
+build/
+
+# Ignorar arquivos de saída do Vite
+.vite/
+.cache/
+output/
 *.log
+
+# Ignorar configurações locais de IDEs e editores
+.vscode/
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Ignorar caches do npm
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ignorar logs de depuração
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-.env
-.env.local
+# Ignorar pastas específicas de build do TypeScript (se aplicável)
+*.tsbuildinfo
+
+# Ignorar arquivos gerados por ferramentas de lint e formatadores
+.eslintcache
+
+# Ignorar pastas temporárias do Vite
+temp/
+tmp/
+vite-plugin-*
+
+# Ignorar arquivos de backup do editor
+*~
