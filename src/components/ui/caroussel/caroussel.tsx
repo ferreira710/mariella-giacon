@@ -1,11 +1,8 @@
+import 'swiper/css/bundle'
 import { useEffect, useState } from 'react'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import ImageBanner from '../../utils/imageBanner'
-import 'swiper/css'
-import 'swiper/css/a11y'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 
 interface Props {
   selectedProject: string | null
@@ -17,7 +14,7 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
   const [projectArray, setProjectArray] = useState<string[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
 
-  const allImages = import.meta.glob('../../../assets/static/projetos/**/*.jpg', { eager: true })
+  const allImages = import.meta.glob('/src/assets/static/projetos/**/*.jpg', { eager: true })
 
   const handleSlideChange = () => {
     setActiveSlide(activeSlide + 1)
@@ -37,6 +34,12 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
       }
     }
   }, [selectedProject])
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'))
+    }, 100)
+  }, [])
 
   return (
     <Swiper
