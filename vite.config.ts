@@ -6,10 +6,12 @@ export default defineConfig({
   server: {
     port: 3000,
     headers: {
-      'Cache-Control': 'public, max-age=604800, immutable'
+      'Cache-Control': 'public, max-age=604800, immutable',
+      'Access-Control-Allow-Origin': '*'
     }
   },
-  assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.jpeg'],
+
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
