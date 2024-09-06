@@ -11,7 +11,8 @@ export default defineConfig({
   },
   assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
   build: {
-    chunkSizeWarningLimit: 550,
+    outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: true,
     minify: 'esbuild',
     rollupOptions: {

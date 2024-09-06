@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Saudagar";
-  src: url("/assets/fonts/saudagar.woff2") format("woff2"),
-       url("/assets/fonts/saudagar.woff") format("woff"),
-       url("/assets/fonts/saudagar.ttf") format("truetype");
-}
-
 @keyframes kenburns-top {
   0% {
     transform: scale(1.25) translateY(-25px);

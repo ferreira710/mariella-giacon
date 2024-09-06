@@ -12,9 +12,6 @@ export default {
       screens: {
         profileImage: '1112px'
       },
-      fontFamily: {
-        saudagar: ['Saudagar']
-      },
       colors: {
         text: '#101b0e',
         background: '#ecf4eb',
