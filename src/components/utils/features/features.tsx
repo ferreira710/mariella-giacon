@@ -1,8 +1,8 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import Carousel from '../../ui/caroussel/caroussel'
+import Carousel from '../../ui/caroussel'
 import 'swiper/css'
 import 'swiper/css/a11y'
 import 'swiper/css/navigation'
@@ -33,24 +33,22 @@ export default function Features() {
     setActiveSlide(activeSlide + 1)
   }
 
-  const heightFix = () => {
+  const heightFix = useCallback(() => {
     if (tabs.current?.parentElement)
       tabs.current.parentElement.style.height = `${tabs.current.clientHeight}px`
-  }
+  }, [])
 
-  const handleInit = () => {
+  const handleInit = useCallback(() => {
     setActiveSlide(swiper?.activeIndex || 0)
-  }
+  }, [swiper])
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     heightFix()
-  }, [])
+  }, [heightFix])
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     handleInit()
-  }, [])
+  }, [handleInit])
 
   useEffect(() => {
     async function getImages() {
@@ -59,8 +57,9 @@ export default function Features() {
           eager: true
         })
 
-        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-        const imageArray = Object.values(images).map((module: any) => module.default)
+        const imageArray = Object.values(images).map(
+          (module) => (module as { default: string }).default
+        )
 
         setProjectArray(imageArray)
       } catch (error) {
@@ -107,7 +106,6 @@ export default function Features() {
               })
               .map((image, index) => (
                 <SwiperSlide key={image}>
-                  {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
                   <img
                     className="flex h-96 w-full object-cover cursor-pointer max-w-full select-none"
                     src={image}
@@ -116,6 +114,13 @@ export default function Features() {
                       setOpen(true)
                       const clickedProject = projectArray[index]
                       setSelectedProject(clickedProject)
+                    }}
+                    onKeyUp={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        setOpen(true)
+                        const clickedProject = projectArray[index]
+                        setSelectedProject(clickedProject)
+                      }
                     }}
                   />
                 </SwiperSlide>
@@ -146,7 +151,7 @@ export default function Features() {
                   setSelectedProject(null)
                 }}
               >
-                <span className="material-symbols-outlined text-white text-4xl hover:bg-black">
+                <span className="material-symbols-outlined justify-center text-white hover:bg-black p-2">
                   close
                 </span>
               </button>

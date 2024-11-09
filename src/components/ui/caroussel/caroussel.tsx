@@ -14,7 +14,9 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
   const [projectArray, setProjectArray] = useState<string[]>([])
   const [activeSlide, setActiveSlide] = useState(0)
 
-  const allImages = import.meta.glob('/src/assets/static/projetos/**/*.jpg', { eager: true })
+  const allImages = import.meta.glob<{ default: string }>('/src/assets/static/projetos/**/*.jpg', {
+    eager: true
+  })
 
   const handleSlideChange = () => {
     setActiveSlide(activeSlide + 1)
@@ -27,8 +29,7 @@ export default function Caroussel({ selectedProject, setOpen }: Props) {
         const projectName = projectNameMatch[1]
         const imageArray = Object.entries(allImages)
           .filter(([path]) => path.includes(`projetos/${projectName}/`))
-          // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-          .map(([_, module]: [string, any]) => module.default)
+          .map(([_, module]: [string, { default: string }]) => module.default)
 
         setProjectArray(imageArray)
       }

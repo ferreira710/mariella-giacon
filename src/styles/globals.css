@@ -37,10 +37,22 @@ body {
   .swiper-button-prev {
     color: #fff;
     padding: 24px;
-
     &:hover {
       background: black;
     }
   }
-}
 
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  }
+}
